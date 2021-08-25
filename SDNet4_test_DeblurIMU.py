@@ -218,7 +218,7 @@ def main():
             stop = time.time()
             test_time += stop - start
             print('RunTime:%.4f' % (stop - start), '  Average Runtime:%.4f' % (test_time / (iteration + 1)))
-            save_images(deblurred_image.data + 0.5, images_name[-6] + '.png')
+            save_images(deblurred_image.data + 0.5, images_name[-6:] + '.png')
             iteration += 1
 
 

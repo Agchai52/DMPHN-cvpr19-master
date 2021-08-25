@@ -13,7 +13,7 @@ def psnr(img1, img2):
     return 20 * math.log10(PIXEL_MAX / math.sqrt(mse))
 
 
-deblu_root = "./DeblurIMU_test_res"  #
+deblu_root = "./DeblurIMU_test_res/"  #
 sharp_root = './dataset/AidedDeblur/test/'  # _
 
 f_test = open("./dataset/AidedDeblur/test_instance_names.txt", "r")

@@ -22,7 +22,7 @@ parser.add_argument("-se", "--start_epoch", type=int, default=0)
 parser.add_argument("-b", "--batchsize", type=int, default=2)
 parser.add_argument("-c", "--cropsize", type=int, default=256)
 parser.add_argument("-l", "--learning_rate", type=float, default=0.0001)
-parser.add_argument("-g", "--gpu", type=int, default=2)
+parser.add_argument("-g", "--gpu", type=int, default=0)
 args = parser.parse_args()
 
 # Hyper Parameters
@@ -58,6 +58,7 @@ def weight_init(m):
 
 
 def main():
+    os.environ["CUDA_VISIBLE_DEVICES"] = "2"
     print("init data folders")
 
     encoder = {}

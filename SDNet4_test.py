@@ -56,7 +56,7 @@ def weight_init(m):
 
 def main():
     print("init data folders")
-
+    os.environ["CUDA_VISIBLE_DEVICES"] = "2"
     encoder = {}
     decoder = {}
     encoder_optim = {}

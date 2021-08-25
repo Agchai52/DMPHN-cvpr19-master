@@ -37,8 +37,6 @@ CROP_SIZE = args.cropsize
 
 
 def save_images(images, name):
-    if not os.path.exists('./DeblurIMU_test_res'):
-        os.makedirs('./DeblurIMU_test_res')
     filename = EXPDIR + "/" + name
     torchvision.utils.save_image(images, filename)
 
@@ -93,8 +91,8 @@ def main():
                     torch.load(str('./checkpoints/' + METHOD + "/decoder_" + s + "_" + lv + ".pkl")))
                 print("load decoder_" + s + "_" + lv + " successfully!")
 
-    if os.path.exists('./test_results/' + EXPDIR) == False:
-        os.system('mkdir ./test_results/' + EXPDIR)
+    if not os.path.exists('./DeblurIMU_test_res'):
+        os.makedirs('./DeblurIMU_test_res')
 
     iteration = 0.0
     test_time = 0.0

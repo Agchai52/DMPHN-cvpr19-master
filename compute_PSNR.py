@@ -31,7 +31,7 @@ for item in sharp_list:
     if True:
 
         name_sharp = item[-6:]
-        name_deblu = name_sharp + '_blur_err.png'
+        name_deblu = name_sharp + '.png'
 
         path_deblu = os.path.join(deblu_root, name_deblu)
         path_sharp = item + '_ref.png'
